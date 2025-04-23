@@ -1,0 +1,547 @@
+/* Main Styles */
+:root {
+    --primary-color: #4E73DF;
+    --secondary-color: #1CC88A;
+    --dark-color: #5A5C69;
+    --light-color: #F8F9FC;
+    --danger-color: #E74A3B;
+    --warning-color: #F6C23E;
+    --info-color: #36B9CC;
+    
+    /* Light theme (default) */
+    --bg-color: #f8f9fc;
+    --text-color: #5a5c69;
+    --card-bg: #ffffff;
+    --border-color: #e3e6f0;
+    --navbar-bg: #ffffff;
+    --navbar-text: #5a5c69;
+    --footer-bg: #343a40;
+    --footer-text: #ffffff;
+    --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1f3c;
+    --text-color: #e9ecef;
+    --card-bg: #252d4a;
+    --border-color: #2e355a;
+    --navbar-bg: #252d4a;
+    --navbar-text: #e9ecef;
+    --footer-bg: #171c33;
+    --footer-text: #e9ecef;
+    --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    --link-color: #8eb8ff;
+    --input-bg: #2c3352;
+    --input-text: #e9ecef;
+    --input-border: #3a4064;
+    --table-bg: #252d4a;
+    --table-border: #2e355a;
+    --table-hover: #323c64;
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-color: var(--input-border);
+}
+
+[data-theme="dark"] .table {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .table-striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .text-dark {
+    color: #e9ecef !important;
+}
+
+[data-theme="dark"] .text-secondary {
+    color: #ced4da !important;
+}
+
+[data-theme="dark"] .border {
+    border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .navbar-light .navbar-toggler-icon {
+    filter: invert(0.8);
+}
+
+[data-theme="dark"] a {
+    color: var(--link-color);
+}
+
+[data-theme="dark"] .text-white-50 {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 5px;
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    background-color: var(--card-bg);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-doctor {
+    height: 100%;
+}
+
+.card-doctor .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #4e73df 0%, #36b9cc 100%);
+    color: white;
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/medook/assets/img/hero-pattern.svg');
+    background-size: cover;
+    opacity: 0.1;
+}
+
+/* Login/Register Forms */
+.auth-card {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.auth-card .card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Dashboard */
+.sidebar {
+    min-height: calc(100vh - 56px);
+    background-color: var(--primary-color);
+    background-image: linear-gradient(180deg, var(--primary-color) 10%, #224abe 100%);
+    background-size: cover;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0.35rem;
+    margin: 0.2rem 0;
+}
+
+.sidebar .nav-link:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.sidebar .nav-link i {
+    margin-right: 0.5rem;
+}
+
+/* Stats Cards */
+.stat-card {
+    border-left: 4px solid;
+}
+
+.stat-card.primary {
+    border-left-color: var(--primary-color);
+}
+
+.stat-card.success {
+    border-left-color: var(--secondary-color);
+}
+
+.stat-card.warning {
+    border-left-color: var(--warning-color);
+}
+
+.stat-card.danger {
+    border-left-color: var(--danger-color);
+}
+
+/* Custom Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-up {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* Specialty Pills */
+.specialty-pill {
+    display: inline-block;
+    background-color: rgba(78, 115, 223, 0.1);
+    color: var(--primary-color);
+    border-radius: 50px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .sidebar {
+        min-height: auto;
+    }
+}
+
+/* Theme Switcher */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    margin: 0 6px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.theme-toggle-wrapper {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 30px;
+    padding: 4px 10px;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .theme-toggle-wrapper {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-icon-light {
+    color: #f6c23e;
+}
+
+.theme-icon-dark {
+    color: #6a73a1;
+}
+
+[data-theme="dark"] .theme-icon-light {
+    color: #aaa;
+}
+
+[data-theme="dark"] .theme-icon-dark {
+    color: #9ba5e9;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-bg) !important;
+    color: var(--footer-text) !important;
+}
+
+/* Dashboard with dark theme improvements */
+[data-theme="dark"] .sidebar {
+    background-color: #1a1f3c;
+    background-image: linear-gradient(180deg, #1a1f3c 10%, #141a33 100%);
+}
+
+[data-theme="dark"] .stat-card {
+    background-color: #252d4a;
+}
+
+[data-theme="dark"] .specialty-pill {
+    background-color: rgba(78, 115, 223, 0.2);
+}
+
+/* Dark mode Chart improvements */
+[data-theme="dark"] canvas {
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Dark mode hover states */
+[data-theme="dark"] .btn-primary {
+    background-color: #4e73df;
+    border-color: transparent;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background-color: #375ad3;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(78, 115, 223, 0.3);
+}
+
+[data-theme="dark"] .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.1);
+}
+
+[data-theme="dark"] .nav-link:not(.btn):hover::after {
+    background-color: #6889e0;
+}
+
+[data-theme="dark"] .nav-item:not(:last-child) .nav-link:hover {
+    color: #6889e0;
+}
+
+[data-theme="dark"] .auth-card .card-title {
+    color: #6889e0;
+}
+
+[data-theme="dark"] hr {
+    border-color: var(--border-color);
+    opacity: 0.1;
+}
+
+/* Dashboard visual improvement */
+[data-theme="dark"] .stat-card {
+    border-left-width: 5px;
+}
+
+/* Improve form elements in dark mode */
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 0 0.25rem rgba(78, 115, 223, 0.25);
+}
+
+/* Adjust font color in dark mode */
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] h5, 
+[data-theme="dark"] h6 {
+    color: #f8f9fc;
+}
+
+[data-theme="dark"] .badge.bg-success,
+[data-theme="dark"] .badge.bg-danger,
+[data-theme="dark"] .badge.bg-warning,
+[data-theme="dark"] .badge.bg-info {
+    color: #1a1f3c;
+    font-weight: 600;
+}
+
+/* Dark mode specific fixes */
+[data-theme="dark"] .text-muted {
+    color: #adb5bd !important;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: #1e2642 !important;
+}
+
+[data-theme="dark"] .card-doctor .card-img-top {
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .card-footer {
+    background-color: var(--card-bg) !important;
+    border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .specialty-pill {
+    background-color: rgba(78, 115, 223, 0.2);
+    color: #a0c0ff;
+}
+
+[data-theme="dark"] .rounded-circle {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .feature-icon {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Improve doctor card readability in dark mode */
+[data-theme="dark"] .card-title,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: #e9ecef;
+}
+
+[data-theme="dark"] .card-text {
+    color: #ced4da;
+}
+
+/* Better contrast for buttons in dark mode */
+[data-theme="dark"] .btn-outline-primary {
+    color: #a0c0ff;
+    border-color: #4e73df;
+}
+
+[data-theme="dark"] .btn-outline-primary:hover {
+    background-color: #4e73df;
+    color: #fff;
+}
+
+[data-theme="dark"] .btn-light {
+    background-color: #e9ecef;
+    color: #1a1f3c;
+}
+
+/* Fix hero section in dark mode */
+[data-theme="dark"] .hero-section::before {
+    opacity: 0.2;
+}
+
+/* Improve modal appearance in dark mode */
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+    border-color: var(--border-color);
+}
+
+/* Profile page dark mode improvements */
+[data-theme="dark"] .table-light {
+    background-color: #2c3352;
+    color: #e9ecef;
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.15);
+}
+
+[data-theme="dark"] .progress {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .card-header.bg-white {
+    background-color: var(--card-bg) !important;
+    border-bottom-color: var(--border-color);
+}
+
+[data-theme="dark"] .badge.bg-warning.text-dark {
+    color: #1a1f3c !important;
+}
+
+[data-theme="dark"] .rounded-circle.bg-primary {
+    background-color: #375ad3 !important;
+    box-shadow: 0 0 15px rgba(55, 90, 211, 0.3);
+}
+
+[data-theme="dark"] .rounded-circle.bg-success,
+[data-theme="dark"] .rounded-circle.bg-info {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .form-text,
+[data-theme="dark"] small.text-muted {
+    color: #adb5bd !important;
+}
+
+[data-theme="dark"] .form-control:disabled, 
+[data-theme="dark"] .form-control[readonly] {
+    background-color: #1e2642;
+    border-color: var(--border-color);
+    color: #6c757d;
+}
+
+[data-theme="dark"] .table-responsive {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .table > :not(caption) > * > * {
+    border-bottom-color: var(--border-color);
+} 
