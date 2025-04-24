@@ -53,7 +53,7 @@ After setting up the database, you can log in with the following default account
 
 ### Admin
 - **Username**: admin
-- **Password**: password
+- **Password**: admin123
 - **Access**: Full system administration
 
 ### Doctor
