@@ -2,6 +2,9 @@
 
 MedOok is a comprehensive web application that allows patients to book appointments with doctors online. Built with PHP, MySQL, and modern frontend technologies.
 
+![Image](https://github.com/user-attachments/assets/c0107ef5-8713-4835-aa8b-f653cc3e8b83)
+
+
 ## Features
 
 - **User Authentication**: Secure registration and login system with role-based access control
