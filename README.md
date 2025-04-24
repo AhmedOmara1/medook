@@ -24,7 +24,7 @@ MedOok is a comprehensive web application that allows patients to book appointme
 
 1. **Clone the repository to your web server directory**:
    ```
-   git clone https://github.com/yourusername/medook.git
+   git clone https://github.com/AhmedOmara1/medook.git
    ```
    Or download and extract the ZIP file to your web server directory (e.g., `htdocs` for XAMPP)
 
